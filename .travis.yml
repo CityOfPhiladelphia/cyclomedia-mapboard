@@ -1,0 +1,5 @@
+language: python
+install:
+  - pip install awscli
+script:
+  - aws s3 cp * s3://cyclomedia-mapboard
