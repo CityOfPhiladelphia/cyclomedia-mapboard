@@ -3,7 +3,6 @@ install:
   - pip install awscli
 script:
   - gzip cyclomedia-mapboard.js
-  - rm cyclomedia-mapboard.js
   - mv cyclomedia-mapboard.js.gz cyclomedia-mapboard.js
   - aws s3 cp cyclomedia-mapboard.js s3://cyclomedia-mapboard --content-encoding gzip
   - aws s3 cp helvetiker_regular.typeface.json s3://cyclomedia-mapboard
