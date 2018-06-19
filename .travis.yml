@@ -2,4 +2,5 @@ language: python
 install:
   - pip install awscli
 script:
+  - gzip cyclomedia-mapboard.js
   - aws s3 cp . s3://cyclomedia-mapboard --recursive --exclude ".git/*" --exclude ".travis.yml"
