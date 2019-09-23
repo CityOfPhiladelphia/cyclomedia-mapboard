@@ -2,8 +2,11 @@ language: python
 install:
   - pip install awscli
 script:
-  - gzip cyclomedia-19-12-mapboard.js
-  - mv cyclomedia-19-12-mapboard.js.gz cyclomedia-19-12-mapboard.js
-  - aws s3 cp cyclomedia-19-12-mapboard.js s3://cyclomedia-mapboard --content-encoding gzip
+  # - gzip cyclomedia-19-12-mapboard.js
+  # - mv cyclomedia-19-12-mapboard.js.gz cyclomedia-19-12-mapboard.js
+  # - aws s3 cp cyclomedia-19-12-mapboard.js s3://cyclomedia-mapboard --content-encoding gzip
+  - gzip cyclomedia-19-12.js
+  - mv cyclomedia-19-12.js.gz cyclomedia-19-12.js
+  - aws s3 cp cyclomedia-19-12.js s3://cyclomedia-mapboard --content-encoding gzip
   - aws s3 cp helvetiker_regular.typeface.json s3://cyclomedia-mapboard
   - aws s3 cp loading-mini.gif s3://cyclomedia-mapboard
